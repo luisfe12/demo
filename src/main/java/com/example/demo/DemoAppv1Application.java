@@ -1,0 +1,29 @@
+package com.example.demo;
+
+import com.example.demo.domain.Seller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoAppv1Application implements CommandLineRunner {
+
+    @Autowired
+    private Seller seller;
+
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoAppv1Application.class, args);
+    }
+//	//public static void main(String[] args) {
+//		SpringApplication.run(DemoAppv1Application.class, args);
+//	}
+    @Override
+    public void run(String... args) throws Exception {
+        seller.shpInfoV2();
+    }
+
+
+
+}
